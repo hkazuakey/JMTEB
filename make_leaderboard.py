@@ -132,7 +132,9 @@ for task_name, task_results in all_results.items():
 
     # add header
     table_list.insert(0, ["Model", AVG_COLUMN_NAME, *dataset_keys])
-    markdown_table = tabulate(table_list, headers="firstrow", tablefmt="pipe")
+    # Set alignment: left for model names, center for all numeric columns
+    col_alignment = ["left"] + ["center"] * (len(dataset_keys) + 1)
+    markdown_table = tabulate(table_list, headers="firstrow", tablefmt="pipe", colalign=col_alignment)
     markdown_tables[task_name] = markdown_table
 
 """
