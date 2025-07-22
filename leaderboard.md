@@ -5,233 +5,218 @@ This leaderboard shows the results stored under `docs/results`. The scores are a
 
 The summary shows the average scores within each task. The average score is the average of scores by dataset.
 
-| Model                                         | Avg.      | Retrieval   | STS       | Classification   | Reranking   | Clustering   | PairClassification   |
-|:----------------------------------------------|:----------|:------------|:----------|:-----------------|:------------|:-------------|:---------------------|
-| sbintuitions/sarashina-embedding-v1-1b        | **75.50** | **77.61**   | 82.71     | **78.37**        | **93.74**   | 53.86        | 62.00                |
-| OpenAI/text-embedding-3-large                 | 74.05     | 74.48       | 82.52     | 77.58            | 93.58       | 53.32        | 62.35                |
-| jinaai/jina-embeddings-v3                     | 73.44     | 75.22       | 80.05     | 76.39            | 92.71       | 51.46        | 62.37                |
-| cl-nagoya/ruri-large                          | 73.31     | 73.02       | 83.13     | 77.43            | 92.99       | 51.82        | 62.29                |
-| pkshatech/GLuCoSE-base-ja-v2                  | 72.23     | 73.36       | 82.96     | 74.21            | 93.01       | 48.65        | 62.37                |
-| pkshatech/RoSEtta-base-ja                     | 72.04     | 73.21       | 81.39     | 72.41            | 92.69       | 53.23        | 61.74                |
-| cl-nagoya/ruri-base                           | 71.91     | 69.82       | 82.87     | 75.58            | 92.91       | **54.16**    | 62.38                |
-| cl-nagoya/ruri-small                          | 71.53     | 69.41       | 82.79     | 76.22            | 93.00       | 51.19        | 62.11                |
-| intfloat/multilingual-e5-large                | 70.90     | 70.98       | 79.70     | 72.89            | 92.96       | 51.24        | 62.15                |
-| OpenAI/text-embedding-3-small                 | 69.18     | 66.39       | 79.46     | 73.06            | 92.92       | 51.06        | 62.27                |
-| intfloat/multilingual-e5-base                 | 68.61     | 68.21       | 79.84     | 69.30            | 92.85       | 48.26        | 62.26                |
-| intfloat/multilingual-e5-small                | 67.71     | 67.27       | 80.07     | 67.62            | 93.03       | 46.91        | 62.19                |
-| pkshatech/GLuCoSE-base-ja                     | 67.29     | 59.02       | 78.71     | 76.82            | 91.90       | 49.78        | **66.39**            |
-| OpenAI/text-embedding-ada-002                 | 67.21     | 64.38       | 79.02     | 69.75            | 93.04       | 48.30        | 62.40                |
-| cl-nagoya/sup-simcse-ja-base                  | 63.36     | 49.64       | 82.05     | 73.47            | 91.83       | 51.79        | 62.57                |
-| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 61.55     | 47.38       | 78.99     | 73.13            | 91.30       | 48.25        | 62.27                |
-| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 60.83     | 46.36       | 77.49     | 73.30            | 91.16       | 46.68        | 62.38                |
-| oshizo/sbert-jsnli-luke-japanese-base-lite    | 60.77     | 43.00       | 76.60     | 76.61            | 91.56       | 50.33        | 62.38                |
-| cl-nagoya/unsup-simcse-ja-large               | 59.58     | 40.53       | 80.56     | 74.66            | 90.95       | 48.41        | 62.49                |
-| MU-Kindai/Japanese-MixCSE-BERT-base           | 59.03     | 42.59       | 77.05     | 72.90            | 91.01       | 44.95        | 62.33                |
-| cl-nagoya/sup-simcse-ja-large                 | 58.88     | 37.62       | **83.18** | 73.73            | 91.48       | 50.56        | 62.51                |
-| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 58.77     | 40.82       | 78.28     | 73.47            | 90.95       | 45.81        | 62.35                |
-| MU-Kindai/Japanese-DiffCSE-BERT-base          | 58.66     | 41.79       | 75.50     | 73.77            | 90.95       | 44.22        | 62.38                |
-| cl-nagoya/unsup-simcse-ja-base                | 58.39     | 40.23       | 78.72     | 73.07            | 91.16       | 44.77        | 62.44                |
-| sentence-transformers/LaBSE                   | 58.01     | 40.12       | 76.56     | 72.66            | 91.63       | 44.88        | 62.33                |
-| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 57.97     | 41.32       | 74.66     | 72.76            | 90.66       | 43.11        | 62.37                |
-| pkshatech/simcse-ja-bert-base-clcmlp          | 56.86     | 37.00       | 76.80     | 71.30            | 91.49       | 47.53        | 62.40                |
-| sentence-transformers/stsb-xlm-r-multilingual | 48.21     | 21.00       | 75.40     | 71.84            | 90.20       | 27.46        | 62.20                |
-| colorfulscoop/sbert-base-ja                   | 47.38     | 16.52       | 70.42     | 69.07            | 89.97       | 44.81        | 62.31                |
+| Model                                         | Avg.      | Retrieval   | STS       | Classification   | Reranking   | Clustering   |
+|:----------------------------------------------|:----------|:------------|:----------|:-----------------|:------------|:-------------|
+| sbintuitions/sarashina-embedding-v1-1b        | **74.63** | **73.94**   | 81.71     | **77.18**        | 84.36       | 50.23        |
+| cl-nagoya/ruri-v3-310m                        | 74.24     | 72.95       | 81.23     | 76.88            | **84.63**   | 50.85        |
+| cl-nagoya/ruri-large-v2                       | 74.01     | 72.82       | **83.26** | 76.49            | 84.61       | 48.75        |
+| cl-nagoya/ruri-v3-130m                        | 73.12     | 72.18       | 79.25     | 75.90            | 83.13       | 49.30        |
+| cl-nagoya/ruri-large                          | 72.75     | 69.67       | 82.77     | 76.57            | 82.64       | 51.93        |
+| cl-nagoya/ruri-base-v2                        | 72.34     | 69.99       | 82.94     | 75.16            | 83.16       | 49.29        |
+| cl-nagoya/ruri-v3-70m                         | 72.33     | 70.94       | 79.85     | 76.27            | 82.97       | 45.49        |
+| cl-nagoya/ruri-v3-30m                         | 72.05     | 70.54       | 82.47     | 74.23            | 81.57       | 49.67        |
+| pkshatech/GLuCoSE-base-ja-v2                  | 71.11     | 68.45       | 82.95     | 73.52            | 82.63       | 48.19        |
+| cl-nagoya/ruri-small-v2                       | 71.10     | 68.41       | 82.92     | 73.32            | 82.24       | 49.32        |
+| intfloat/multilingual-e5-large                | 70.67     | 67.65       | 80.86     | 72.30            | 83.01       | 50.58        |
+| cl-nagoya/ruri-base                           | 70.60     | 66.66       | 82.86     | 75.29            | 81.25       | 48.16        |
+| cl-nagoya/ruri-small                          | 69.96     | 64.68       | 82.76     | 74.40            | 80.23       | **53.35**    |
+| pkshatech/RoSEtta-base-ja                     | 69.72     | 67.62       | 81.39     | 71.65            | 81.25       | 45.96        |
+| intfloat/multilingual-e5-base                 | 68.06     | 64.48       | 80.46     | 69.70            | 79.46       | 50.12        |
+| intfloat/multilingual-e5-small                | 67.32     | 63.91       | 80.46     | 67.77            | 80.09       | 48.71        |
+| pkshatech/GLuCoSE-base-ja                     | 63.78     | 54.58       | 78.68     | 75.02            | 72.37       | 47.05        |
+| cl-nagoya/sup-simcse-ja-base                  | 59.85     | 45.01       | 82.05     | 72.72            | 70.36       | 51.92        |
+| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 57.53     | 42.41       | 79.00     | 71.83            | 71.88       | 41.36        |
+| oshizo/sbert-jsnli-luke-japanese-base-lite    | 56.66     | 38.43       | 76.56     | 74.47            | 69.67       | 46.96        |
+| cl-nagoya/sup-simcse-ja-large                 | 56.38     | 37.39       | 83.17     | 72.74            | 68.76       | 49.37        |
+| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 55.60     | 39.85       | 77.96     | 71.46            | 69.92       | 37.60        |
+| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 55.35     | 36.23       | 78.29     | 72.59            | 70.59       | 44.54        |
+| MU-Kindai/Japanese-MixCSE-BERT-base           | 54.62     | 36.25       | 77.75     | 71.81            | 68.58       | 43.18        |
+| cl-nagoya/unsup-simcse-ja-large               | 54.23     | 33.99       | 80.56     | 73.71            | 67.39       | 43.52        |
+| cl-nagoya/unsup-simcse-ja-base                | 53.87     | 35.35       | 78.74     | 72.41            | 66.20       | 41.39        |
+| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 53.82     | 35.22       | 74.96     | 71.48            | 68.15       | 42.86        |
+| pkshatech/simcse-ja-bert-base-clcmlp          | 53.74     | 33.79       | 76.81     | 70.12            | 68.10       | 49.34        |
+| MU-Kindai/Japanese-DiffCSE-BERT-base          | 53.31     | 34.93       | 76.70     | 72.06            | 67.73       | 37.34        |
+| sentence-transformers/LaBSE                   | 52.95     | 34.08       | 76.56     | 71.84            | 67.15       | 38.68        |
+| sentence-transformers/stsb-xlm-r-multilingual | 43.85     | 18.29       | 75.41     | 71.23            | 58.82       | 27.71        |
+| colorfulscoop/sbert-base-ja                   | 42.90     | 15.45       | 70.41     | 68.05            | 59.38       | 39.07        |
 
 ## Retrieval
-| Model                                         | Avg.      | jagovfaqs_22k<br>(ndcg@10)   | jaqket<br>(ndcg@10)   | mrtydi<br>(ndcg@10)   | nlp_journal_abs_intro<br>(ndcg@10)   | nlp_journal_title_abs<br>(ndcg@10)   | nlp_journal_title_intro<br>(ndcg@10)   |
-|:----------------------------------------------|:----------|:-----------------------------|:----------------------|:----------------------|:-------------------------------------|:-------------------------------------|:---------------------------------------|
-| sbintuitions/sarashina-embedding-v1-1b        | **77.61** | 71.68                        | **72.79**             | 41.95                 | 93.94                                | 96.96                                | 88.33                                  |
-| jinaai/jina-embeddings-v3                     | 75.22     | 71.50                        | 46.48                 | **45.45**             | 98.43                                | 95.62                                | 93.85                                  |
-| OpenAI/text-embedding-3-large                 | 74.48     | 72.41                        | 48.21                 | 34.88                 | **99.33**                            | 96.55                                | **95.47**                              |
-| pkshatech/GLuCoSE-base-ja-v2                  | 73.36     | 69.79                        | 67.29                 | 41.86                 | 90.29                                | 95.11                                | 75.80                                  |
-| pkshatech/RoSEtta-base-ja                     | 73.21     | 65.96                        | 65.33                 | 36.73                 | 95.54                                | 94.08                                | 81.63                                  |
-| cl-nagoya/ruri-large                          | 73.02     | **76.68**                    | 61.74                 | 38.03                 | 87.12                                | 96.58                                | 77.97                                  |
-| intfloat/multilingual-e5-large                | 70.98     | 70.30                        | 58.78                 | 43.63                 | 86.00                                | 94.70                                | 72.48                                  |
-| cl-nagoya/ruri-base                           | 69.82     | 74.56                        | 50.12                 | 35.45                 | 86.89                                | 96.57                                | 75.31                                  |
-| cl-nagoya/ruri-small                          | 69.41     | 73.65                        | 48.44                 | 33.43                 | 87.69                                | **97.17**                            | 76.09                                  |
-| intfloat/multilingual-e5-base                 | 68.21     | 65.34                        | 50.67                 | 38.38                 | 87.10                                | 94.73                                | 73.05                                  |
-| intfloat/multilingual-e5-small                | 67.27     | 64.11                        | 49.97                 | 36.05                 | 85.21                                | 95.26                                | 72.99                                  |
-| OpenAI/text-embedding-3-small                 | 66.39     | 64.02                        | 33.94                 | 20.03                 | 98.47                                | 91.70                                | 90.17                                  |
-| OpenAI/text-embedding-ada-002                 | 64.38     | 61.02                        | 42.56                 | 14.51                 | 94.99                                | 91.23                                | 81.98                                  |
-| pkshatech/GLuCoSE-base-ja                     | 59.02     | 63.88                        | 39.82                 | 30.28                 | 78.26                                | 82.06                                | 59.82                                  |
-| cl-nagoya/sup-simcse-ja-base                  | 49.64     | 51.62                        | 50.25                 | 13.98                 | 68.08                                | 65.71                                | 48.22                                  |
-| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 47.38     | 50.14                        | 45.84                 | 13.00                 | 55.09                                | 74.97                                | 45.24                                  |
-| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 46.36     | 47.39                        | 39.57                 | 11.44                 | 64.16                                | 70.23                                | 45.37                                  |
-| oshizo/sbert-jsnli-luke-japanese-base-lite    | 43.00     | 51.99                        | 42.07                 | 10.12                 | 49.30                                | 71.94                                | 32.59                                  |
-| MU-Kindai/Japanese-MixCSE-BERT-base           | 42.59     | 42.37                        | 37.72                 | 7.88                  | 63.70                                | 64.13                                | 39.73                                  |
-| MU-Kindai/Japanese-DiffCSE-BERT-base          | 41.79     | 42.31                        | 36.20                 | 7.81                  | 60.77                                | 64.34                                | 39.32                                  |
-| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 41.32     | 44.11                        | 39.61                 | 8.15                  | 62.76                                | 58.39                                | 34.89                                  |
-| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 40.82     | 47.04                        | 44.10                 | 11.43                 | 43.43                                | 62.41                                | 36.52                                  |
-| cl-nagoya/unsup-simcse-ja-large               | 40.53     | 45.09                        | 34.60                 | 5.75                  | 55.07                                | 63.07                                | 39.61                                  |
-| cl-nagoya/unsup-simcse-ja-base                | 40.23     | 46.00                        | 39.46                 | 5.55                  | 60.26                                | 55.63                                | 34.49                                  |
-| sentence-transformers/LaBSE                   | 40.12     | 43.10                        | 34.25                 | 4.24                  | 48.92                                | 75.13                                | 35.09                                  |
-| cl-nagoya/sup-simcse-ja-large                 | 37.62     | 46.84                        | 39.88                 | 11.83                 | 63.43                                | 37.93                                | 25.79                                  |
-| pkshatech/simcse-ja-bert-base-clcmlp          | 37.00     | 41.50                        | 46.00                 | 10.19                 | 40.14                                | 59.63                                | 24.53                                  |
-| sentence-transformers/stsb-xlm-r-multilingual | 21.00     | 25.11                        | 21.61                 | 2.76                  | 28.49                                | 36.47                                | 11.55                                  |
-| colorfulscoop/sbert-base-ja                   | 16.52     | 21.50                        | 13.16                 | 0.44                  | 28.78                                | 22.40                                | 12.82                                  |
+| Model                                         | Avg.      | jacwir_retrieval<br>(ndcg@10)   | jagovfaqs_22k<br>(ndcg@10)   | jaqket<br>(ndcg@10)   | mintaka_retrieval<br>(ndcg@10)   | miracl_retrieval<br>(ndcg@10)   | mldr_retrieval<br>(ndcg@10)   | mrtydi<br>(ndcg@10)   | nlp_abs_article<br>(ndcg@10)   | nlp_abs_intro<br>(ndcg@10)   | nlp_title_abs<br>(ndcg@10)   | nlp_title_intro<br>(ndcg@10)   |
+|:----------------------------------------------|:----------|:--------------------------------|:-----------------------------|:----------------------|:---------------------------------|:--------------------------------|:------------------------------|:----------------------|:-------------------------------|:-----------------------------|:-----------------------------|:-------------------------------|
+| sbintuitions/sarashina-embedding-v1-1b        | **73.94** | 82.43                           | 71.72                        | 66.52                 | **62.60**                        | 63.25                           | 34.59                         | 40.75                 | 99.20                          | 99.16                        | 96.85                        | **96.29**                      |
+| cl-nagoya/ruri-v3-310m                        | 72.95     | 83.59                           | 72.51                        | 69.79                 | 43.03                            | 61.75                           | 38.78                         | 41.10                 | 99.44                          | **99.38**                    | 97.34                        | 95.73                          |
+| cl-nagoya/ruri-large-v2                       | 72.82     | 83.67                           | **76.79**                    | **72.42**             | 51.48                            | 67.64                           | 38.52                         | **48.14**             | 90.92                          | 90.98                        | **97.79**                    | 82.69                          |
+| cl-nagoya/ruri-v3-130m                        | 72.18     | 83.97                           | 70.44                        | 66.90                 | 37.71                            | 63.00                           | 40.85                         | 40.86                 | **99.49**                      | 99.12                        | 96.83                        | 94.86                          |
+| cl-nagoya/ruri-v3-70m                         | 70.94     | 82.03                           | 69.21                        | 64.41                 | 35.44                            | 62.20                           | 40.07                         | 39.59                 | 98.36                          | 98.28                        | 95.88                        | 94.82                          |
+| cl-nagoya/ruri-v3-30m                         | 70.54     | 82.53                           | 67.07                        | 58.82                 | 37.25                            | 60.46                           | **43.03**                     | 36.34                 | 98.74                          | 99.10                        | 97.01                        | 95.57                          |
+| cl-nagoya/ruri-base-v2                        | 69.99     | 83.63                           | 74.86                        | 62.08                 | 46.26                            | 66.08                           | 37.11                         | 42.81                 | 90.48                          | 89.58                        | 96.88                        | 80.16                          |
+| cl-nagoya/ruri-large                          | 69.67     | 84.48                           | 76.50                        | 66.52                 | 50.48                            | 55.69                           | 37.97                         | 40.56                 | 89.37                          | 89.01                        | 96.68                        | 79.06                          |
+| pkshatech/GLuCoSE-base-ja-v2                  | 68.45     | 83.85                           | 69.85                        | 67.52                 | 39.57                            | 65.29                           | 33.75                         | 41.67                 | 89.91                          | 90.08                        | 95.67                        | 75.79                          |
+| cl-nagoya/ruri-small-v2                       | 68.41     | 84.59                           | 73.28                        | 62.45                 | 36.63                            | 63.29                           | 33.43                         | 40.40                 | 90.72                          | 90.72                        | 97.21                        | 79.81                          |
+| intfloat/multilingual-e5-large                | 67.65     | **86.41**                       | 73.01                        | 59.67                 | 39.59                            | **70.96**                       | 29.85                         | 47.82                 | 83.26                          | 85.71                        | 95.29                        | 72.57                          |
+| pkshatech/RoSEtta-base-ja                     | 67.62     | 82.02                           | 66.27                        | 65.34                 | 34.04                            | 60.20                           | 32.37                         | 36.77                 | 96.04                          | 95.41                        | 93.17                        | 82.19                          |
+| cl-nagoya/ruri-base                           | 66.66     | 83.75                           | 74.91                        | 55.85                 | 44.56                            | 52.60                           | 36.57                         | 35.26                 | 88.16                          | 88.51                        | 95.40                        | 77.74                          |
+| cl-nagoya/ruri-small                          | 64.68     | 84.15                           | 73.62                        | 53.08                 | 35.36                            | 50.37                           | 33.16                         | 32.61                 | 88.75                          | 88.16                        | 96.06                        | 76.21                          |
+| intfloat/multilingual-e5-base                 | 64.48     | 84.33                           | 68.74                        | 51.69                 | 34.68                            | 64.50                           | 25.73                         | 42.30                 | 83.56                          | 84.48                        | 94.62                        | 74.70                          |
+| intfloat/multilingual-e5-small                | 63.91     | 85.59                           | 65.69                        | 51.57                 | 31.54                            | 63.23                           | 25.91                         | 42.37                 | 83.97                          | 84.10                        | 94.47                        | 74.56                          |
+| pkshatech/GLuCoSE-base-ja                     | 54.58     | 69.30                           | 64.17                        | 39.78                 | 29.81                            | 48.27                           | 25.07                         | 30.14                 | 76.78                          | 77.21                        | 81.40                        | 58.43                          |
+| cl-nagoya/sup-simcse-ja-base                  | 45.01     | 53.32                           | 52.11                        | 50.13                 | 32.88                            | 20.68                           | 24.70                         | 14.14                 | 69.09                          | 66.19                        | 64.84                        | 46.97                          |
+| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 42.41     | 53.17                           | 51.24                        | 45.81                 | 30.42                            | 26.08                           | 23.65                         | 13.06                 | 54.65                          | 52.13                        | 74.13                        | 42.21                          |
+| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 39.85     | 48.96                           | 48.44                        | 38.73                 | 25.72                            | 21.60                           | 18.11                         | 11.02                 | 58.91                          | 60.05                        | 69.15                        | 37.72                          |
+| oshizo/sbert-jsnli-luke-japanese-base-lite    | 38.43     | 59.61                           | 53.98                        | 42.11                 | 24.83                            | 19.28                           | 19.08                         | 10.09                 | 44.07                          | 44.84                        | 73.68                        | 31.15                          |
+| cl-nagoya/sup-simcse-ja-large                 | 37.39     | 43.71                           | 47.48                        | 40.04                 | 37.68                            | 18.13                           | 23.48                         | 11.88                 | 64.08                          | 62.95                        | 36.95                        | 24.90                          |
+| MU-Kindai/Japanese-MixCSE-BERT-base           | 36.25     | 42.44                           | 43.64                        | 37.35                 | 25.18                            | 14.76                           | 16.86                         | 7.77                  | 56.89                          | 59.11                        | 61.81                        | 32.88                          |
+| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 36.23     | 46.29                           | 48.24                        | 44.17                 | 28.89                            | 19.52                           | 18.66                         | 11.44                 | 43.97                          | 40.33                        | 60.49                        | 36.51                          |
+| cl-nagoya/unsup-simcse-ja-base                | 35.35     | 35.11                           | 46.79                        | 39.52                 | 29.92                            | 10.93                           | 15.98                         | 5.51                  | 58.22                          | 58.41                        | 55.58                        | 32.84                          |
+| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 35.22     | 39.93                           | 44.59                        | 38.45                 | 22.39                            | 13.94                           | 13.91                         | 7.30                  | 58.35                          | 58.63                        | 57.43                        | 32.47                          |
+| MU-Kindai/Japanese-DiffCSE-BERT-base          | 34.93     | 40.87                           | 43.87                        | 35.56                 | 19.98                            | 16.52                           | 12.06                         | 7.11                  | 54.30                          | 55.86                        | 62.96                        | 35.17                          |
+| sentence-transformers/LaBSE                   | 34.08     | 49.12                           | 42.78                        | 34.16                 | 20.02                            | 9.64                            | 7.53                          | 4.22                  | 48.06                          | 48.20                        | 75.59                        | 35.53                          |
+| cl-nagoya/unsup-simcse-ja-large               | 33.99     | 37.62                           | 46.60                        | 34.53                 | 30.58                            | 10.33                           | 12.55                         | 5.75                  | 50.45                          | 50.70                        | 60.43                        | 34.32                          |
+| pkshatech/simcse-ja-bert-base-clcmlp          | 33.79     | 45.04                           | 42.21                        | 45.79                 | 31.30                            | 16.94                           | 20.08                         | 10.15                 | 38.13                          | 37.60                        | 59.18                        | 25.26                          |
+| sentence-transformers/stsb-xlm-r-multilingual | 18.29     | 21.31                           | 25.58                        | 21.69                 | 22.31                            | 2.59                            | 6.53                          | 2.78                  | 24.91                          | 25.55                        | 35.84                        | 12.13                          |
+| colorfulscoop/sbert-base-ja                   | 15.45     | 19.30                           | 21.75                        | 13.14                 | 19.07                            | 1.86                            | 6.97                          | 0.41                  | 29.02                          | 25.80                        | 21.07                        | 11.57                          |
 
 ## STS
 | Model                                         | Avg.      | jsick<br>(spearman)   | jsts<br>(spearman)   |
 |:----------------------------------------------|:----------|:----------------------|:---------------------|
-| cl-nagoya/sup-simcse-ja-large                 | **83.18** | 83.80                 | 82.57                |
-| cl-nagoya/ruri-large                          | 83.13     | 82.00                 | 84.26                |
-| pkshatech/GLuCoSE-base-ja-v2                  | 82.96     | **84.96**             | 80.96                |
-| cl-nagoya/ruri-base                           | 82.87     | 82.32                 | 83.43                |
-| cl-nagoya/ruri-small                          | 82.79     | 83.44                 | 82.13                |
-| sbintuitions/sarashina-embedding-v1-1b        | 82.71     | 80.22                 | **85.20**            |
-| OpenAI/text-embedding-3-large                 | 82.52     | 81.27                 | 83.77                |
-| cl-nagoya/sup-simcse-ja-base                  | 82.05     | 82.83                 | 81.27                |
+| cl-nagoya/ruri-large-v2                       | **83.26** | 83.01                 | 83.50                |
+| cl-nagoya/sup-simcse-ja-large                 | 83.17     | 83.78                 | 82.56                |
+| pkshatech/GLuCoSE-base-ja-v2                  | 82.95     | **84.95**             | 80.96                |
+| cl-nagoya/ruri-base-v2                        | 82.94     | 82.55                 | 83.33                |
+| cl-nagoya/ruri-small-v2                       | 82.92     | 83.85                 | 81.99                |
+| cl-nagoya/ruri-base                           | 82.86     | 82.51                 | 83.21                |
+| cl-nagoya/ruri-large                          | 82.77     | 82.28                 | 83.26                |
+| cl-nagoya/ruri-small                          | 82.76     | 83.73                 | 81.79                |
+| cl-nagoya/ruri-v3-30m                         | 82.47     | 81.39                 | 83.55                |
+| cl-nagoya/sup-simcse-ja-base                  | 82.05     | 82.84                 | 81.26                |
+| sbintuitions/sarashina-embedding-v1-1b        | 81.71     | 79.79                 | 83.63                |
 | pkshatech/RoSEtta-base-ja                     | 81.39     | 83.83                 | 78.95                |
-| cl-nagoya/unsup-simcse-ja-large               | 80.56     | 80.15                 | 80.98                |
-| intfloat/multilingual-e5-small                | 80.07     | 81.50                 | 78.65                |
-| jinaai/jina-embeddings-v3                     | 80.05     | 78.16                 | 81.93                |
-| intfloat/multilingual-e5-base                 | 79.84     | 81.28                 | 78.39                |
-| intfloat/multilingual-e5-large                | 79.70     | 78.40                 | 80.99                |
-| OpenAI/text-embedding-3-small                 | 79.46     | 80.83                 | 78.08                |
-| OpenAI/text-embedding-ada-002                 | 79.02     | 79.09                 | 78.94                |
-| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 78.99     | 79.84                 | 78.14                |
-| cl-nagoya/unsup-simcse-ja-base                | 78.72     | 78.49                 | 78.95                |
-| pkshatech/GLuCoSE-base-ja                     | 78.71     | 74.97                 | 82.46                |
-| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 78.28     | 78.75                 | 77.81                |
-| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 77.49     | 78.18                 | 76.81                |
-| MU-Kindai/Japanese-MixCSE-BERT-base           | 77.05     | 77.57                 | 76.53                |
-| pkshatech/simcse-ja-bert-base-clcmlp          | 76.80     | 73.08                 | 80.52                |
-| oshizo/sbert-jsnli-luke-japanese-base-lite    | 76.60     | 72.11                 | 81.09                |
-| sentence-transformers/LaBSE                   | 76.56     | 76.99                 | 76.12                |
-| MU-Kindai/Japanese-DiffCSE-BERT-base          | 75.50     | 75.42                 | 75.58                |
-| sentence-transformers/stsb-xlm-r-multilingual | 75.40     | 72.36                 | 78.44                |
-| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 74.66     | 74.64                 | 74.68                |
-| colorfulscoop/sbert-base-ja                   | 70.42     | 66.59                 | 74.24                |
+| cl-nagoya/ruri-v3-310m                        | 81.23     | 78.12                 | **84.34**            |
+| intfloat/multilingual-e5-large                | 80.86     | 79.85                 | 81.86                |
+| cl-nagoya/unsup-simcse-ja-large               | 80.56     | 80.14                 | 80.98                |
+| intfloat/multilingual-e5-small                | 80.46     | 82.00                 | 78.92                |
+| intfloat/multilingual-e5-base                 | 80.46     | 81.26                 | 79.65                |
+| cl-nagoya/ruri-v3-70m                         | 79.85     | 75.87                 | 83.82                |
+| cl-nagoya/ruri-v3-130m                        | 79.25     | 74.65                 | 83.85                |
+| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 79.00     | 79.86                 | 78.14                |
+| cl-nagoya/unsup-simcse-ja-base                | 78.74     | 78.53                 | 78.94                |
+| pkshatech/GLuCoSE-base-ja                     | 78.68     | 74.90                 | 82.46                |
+| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 78.29     | 78.76                 | 77.82                |
+| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 77.96     | 79.14                 | 76.77                |
+| MU-Kindai/Japanese-MixCSE-BERT-base           | 77.75     | 78.93                 | 76.57                |
+| pkshatech/simcse-ja-bert-base-clcmlp          | 76.81     | 73.11                 | 80.51                |
+| MU-Kindai/Japanese-DiffCSE-BERT-base          | 76.70     | 77.76                 | 75.63                |
+| sentence-transformers/LaBSE                   | 76.56     | 77.01                 | 76.12                |
+| oshizo/sbert-jsnli-luke-japanese-base-lite    | 76.56     | 72.04                 | 81.08                |
+| sentence-transformers/stsb-xlm-r-multilingual | 75.41     | 72.38                 | 78.45                |
+| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 74.96     | 75.25                 | 74.66                |
+| colorfulscoop/sbert-base-ja                   | 70.41     | 66.56                 | 74.25                |
 
 ## Classification
-| Model                                         | Avg.      | amazon_counterfactual<br>(macro_f1)   | amazon_review<br>(macro_f1)   | massive_intent<br>(macro_f1)   | massive_scenario<br>(macro_f1)   |
-|:----------------------------------------------|:----------|:--------------------------------------|:------------------------------|:-------------------------------|:---------------------------------|
-| sbintuitions/sarashina-embedding-v1-1b        | **78.37** | 79.10                                 | **61.48**                     | 82.26                          | 90.65                            |
-| OpenAI/text-embedding-3-large                 | 77.58     | 77.90                                 | 60.44                         | 80.91                          | **91.08**                        |
-| cl-nagoya/ruri-large                          | 77.43     | 80.81                                 | 56.80                         | **82.56**                      | 89.56                            |
-| pkshatech/GLuCoSE-base-ja                     | 76.82     | **82.44**                             | 58.07                         | 78.85                          | 87.94                            |
-| oshizo/sbert-jsnli-luke-japanese-base-lite    | 76.61     | 79.95                                 | 57.48                         | 80.26                          | 88.75                            |
-| jinaai/jina-embeddings-v3                     | 76.39     | 78.83                                 | 59.33                         | 77.65                          | 89.74                            |
-| cl-nagoya/ruri-small                          | 76.22     | 79.92                                 | 55.61                         | 81.49                          | 87.88                            |
-| cl-nagoya/ruri-base                           | 75.58     | 76.66                                 | 55.76                         | 81.41                          | 88.49                            |
-| cl-nagoya/unsup-simcse-ja-large               | 74.66     | 76.79                                 | 55.37                         | 79.13                          | 87.36                            |
-| pkshatech/GLuCoSE-base-ja-v2                  | 74.21     | 74.92                                 | 55.31                         | 79.79                          | 86.84                            |
-| MU-Kindai/Japanese-DiffCSE-BERT-base          | 73.77     | 78.10                                 | 51.56                         | 78.79                          | 86.63                            |
-| cl-nagoya/sup-simcse-ja-large                 | 73.73     | 73.21                                 | 54.76                         | 79.23                          | 87.72                            |
-| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 73.47     | 77.25                                 | 53.42                         | 76.83                          | 86.39                            |
-| cl-nagoya/sup-simcse-ja-base                  | 73.47     | 72.34                                 | 54.41                         | 79.52                          | 87.60                            |
-| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 73.30     | 76.20                                 | 51.52                         | 78.95                          | 86.54                            |
-| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 73.13     | 76.36                                 | 52.75                         | 76.88                          | 86.51                            |
-| cl-nagoya/unsup-simcse-ja-base                | 73.07     | 73.30                                 | 53.93                         | 79.07                          | 85.97                            |
-| OpenAI/text-embedding-3-small                 | 73.06     | 70.01                                 | 55.92                         | 77.66                          | 88.67                            |
-| MU-Kindai/Japanese-MixCSE-BERT-base           | 72.90     | 77.62                                 | 50.86                         | 77.19                          | 85.93                            |
-| intfloat/multilingual-e5-large                | 72.89     | 70.66                                 | 56.54                         | 75.78                          | 88.59                            |
-| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 72.76     | 76.20                                 | 52.06                         | 77.89                          | 84.90                            |
-| sentence-transformers/LaBSE                   | 72.66     | 73.61                                 | 51.70                         | 76.99                          | 88.35                            |
-| pkshatech/RoSEtta-base-ja                     | 72.41     | 70.05                                 | 52.64                         | 79.84                          | 87.10                            |
-| sentence-transformers/stsb-xlm-r-multilingual | 71.84     | 75.65                                 | 51.32                         | 74.28                          | 86.10                            |
-| pkshatech/simcse-ja-bert-base-clcmlp          | 71.30     | 67.49                                 | 50.85                         | 79.67                          | 87.20                            |
-| OpenAI/text-embedding-ada-002                 | 69.75     | 64.42                                 | 53.13                         | 74.57                          | 86.89                            |
-| intfloat/multilingual-e5-base                 | 69.30     | 63.67                                 | 54.24                         | 72.78                          | 86.53                            |
-| colorfulscoop/sbert-base-ja                   | 69.07     | 72.21                                 | 47.95                         | 72.52                          | 83.62                            |
-| intfloat/multilingual-e5-small                | 67.62     | 62.14                                 | 51.27                         | 70.85                          | 86.22                            |
+| Model                                         | Avg.      | amazon_counterfactual<br>(macro_f1)   | amazon_review<br>(macro_f1)   | jpn_sentiment<br>(macro_f1)   | massive_intent<br>(macro_f1)   | massive_scenario<br>(macro_f1)   | sib200_jpn_cls<br>(macro_f1)   | wrime_classification<br>(macro_f1)   |
+|:----------------------------------------------|:----------|:--------------------------------------|:------------------------------|:------------------------------|:-------------------------------|:---------------------------------|:-------------------------------|:-------------------------------------|
+| sbintuitions/sarashina-embedding-v1-1b        | **77.18** | 79.66                                 | **62.05**                     | 94.87                         | 81.21                          | **90.16**                        | 82.63                          | **49.70**                            |
+| cl-nagoya/ruri-v3-310m                        | 76.88     | 82.68                                 | 60.19                         | 95.02                         | **82.36**                      | 89.02                            | 81.30                          | 47.57                                |
+| cl-nagoya/ruri-large                          | 76.57     | 79.94                                 | 56.93                         | 92.72                         | 81.48                          | 89.96                            | 87.52                          | 47.43                                |
+| cl-nagoya/ruri-large-v2                       | 76.49     | 80.94                                 | 56.59                         | 92.84                         | 82.04                          | 89.06                            | 87.17                          | 46.77                                |
+| cl-nagoya/ruri-v3-70m                         | 76.27     | **83.95**                             | 58.67                         | 92.88                         | 80.29                          | 88.39                            | 85.08                          | 44.64                                |
+| cl-nagoya/ruri-v3-130m                        | 75.90     | 78.31                                 | 59.45                         | 94.31                         | 81.49                          | 89.48                            | 81.07                          | 47.19                                |
+| cl-nagoya/ruri-base                           | 75.29     | 74.95                                 | 55.81                         | 92.16                         | 79.70                          | 88.79                            | **89.80**                      | 45.81                                |
+| cl-nagoya/ruri-base-v2                        | 75.16     | 75.67                                 | 55.92                         | 92.47                         | 79.69                          | 88.78                            | 88.79                          | 44.79                                |
+| pkshatech/GLuCoSE-base-ja                     | 75.02     | 82.03                                 | 57.93                         | 92.89                         | 78.52                          | 87.71                            | 77.24                          | 48.82                                |
+| oshizo/sbert-jsnli-luke-japanese-base-lite    | 74.47     | 79.72                                 | 57.51                         | 92.08                         | 80.16                          | 88.78                            | 77.31                          | 45.73                                |
+| cl-nagoya/ruri-small                          | 74.40     | 78.67                                 | 55.58                         | 88.94                         | 79.24                          | 88.61                            | 84.27                          | 45.47                                |
+| cl-nagoya/ruri-v3-30m                         | 74.23     | 76.95                                 | 57.31                         | 93.70                         | 79.44                          | 86.66                            | 83.08                          | 42.46                                |
+| cl-nagoya/unsup-simcse-ja-large               | 73.71     | 76.40                                 | 55.05                         | 90.57                         | 79.25                          | 87.50                            | 82.89                          | 44.33                                |
+| pkshatech/GLuCoSE-base-ja-v2                  | 73.52     | 75.28                                 | 55.19                         | 89.24                         | 78.73                          | 87.14                            | 85.83                          | 43.23                                |
+| cl-nagoya/ruri-small-v2                       | 73.32     | 76.12                                 | 54.99                         | 88.49                         | 79.91                          | 88.46                            | 81.93                          | 43.33                                |
+| cl-nagoya/sup-simcse-ja-large                 | 72.74     | 72.61                                 | 54.56                         | 89.42                         | 79.23                          | 87.71                            | 80.43                          | 45.26                                |
+| cl-nagoya/sup-simcse-ja-base                  | 72.72     | 71.93                                 | 54.54                         | 91.01                         | 80.11                          | 87.63                            | 81.92                          | 41.88                                |
+| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 72.59     | 77.67                                 | 53.48                         | 89.28                         | 76.79                          | 86.24                            | 83.77                          | 40.89                                |
+| cl-nagoya/unsup-simcse-ja-base                | 72.41     | 73.65                                 | 54.14                         | 89.87                         | 77.68                          | 86.10                            | 84.13                          | 41.31                                |
+| intfloat/multilingual-e5-large                | 72.30     | 69.70                                 | 57.64                         | **95.55**                     | 74.01                          | 88.71                            | 78.11                          | 42.38                                |
+| MU-Kindai/Japanese-DiffCSE-BERT-base          | 72.06     | 77.70                                 | 51.46                         | 88.45                         | 78.72                          | 86.40                            | 83.50                          | 38.15                                |
+| sentence-transformers/LaBSE                   | 71.84     | 74.74                                 | 51.63                         | 89.44                         | 77.09                          | 88.39                            | 81.47                          | 40.11                                |
+| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 71.83     | 76.55                                 | 52.73                         | 88.22                         | 77.22                          | 86.25                            | 81.45                          | 40.38                                |
+| MU-Kindai/Japanese-MixCSE-BERT-base           | 71.81     | 77.79                                 | 51.11                         | 87.82                         | 77.97                          | 86.34                            | 85.06                          | 36.56                                |
+| pkshatech/RoSEtta-base-ja                     | 71.65     | 70.21                                 | 52.23                         | 87.28                         | 79.59                          | 86.96                            | 84.01                          | 41.24                                |
+| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 71.48     | 74.30                                 | 51.97                         | 89.69                         | 77.83                          | 84.60                            | 83.82                          | 38.15                                |
+| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 71.46     | 76.40                                 | 51.65                         | 87.86                         | 78.15                          | 86.44                            | 81.80                          | 37.93                                |
+| sentence-transformers/stsb-xlm-r-multilingual | 71.23     | 75.14                                 | 51.14                         | 86.54                         | 74.34                          | 86.07                            | 83.73                          | 41.68                                |
+| pkshatech/simcse-ja-bert-base-clcmlp          | 70.12     | 66.23                                 | 50.86                         | 87.28                         | 79.65                          | 87.23                            | 81.18                          | 38.39                                |
+| intfloat/multilingual-e5-base                 | 69.70     | 64.29                                 | 54.17                         | 92.32                         | 73.19                          | 86.78                            | 78.50                          | 38.65                                |
+| colorfulscoop/sbert-base-ja                   | 68.05     | 70.80                                 | 47.80                         | 83.50                         | 72.89                          | 83.71                            | 82.63                          | 35.06                                |
+| intfloat/multilingual-e5-small                | 67.77     | 58.66                                 | 51.21                         | 87.73                         | 71.34                          | 86.77                            | 81.78                          | 36.91                                |
 
 ## Reranking
-| Model                                         | Avg.      | esci<br>(ndcg@10)   |
-|:----------------------------------------------|:----------|:--------------------|
-| sbintuitions/sarashina-embedding-v1-1b        | **93.74** | **93.74**           |
-| OpenAI/text-embedding-3-large                 | 93.58     | 93.58               |
-| OpenAI/text-embedding-ada-002                 | 93.04     | 93.04               |
-| intfloat/multilingual-e5-small                | 93.03     | 93.03               |
-| pkshatech/GLuCoSE-base-ja-v2                  | 93.01     | 93.01               |
-| cl-nagoya/ruri-small                          | 93.00     | 93.00               |
-| cl-nagoya/ruri-large                          | 92.99     | 92.99               |
-| intfloat/multilingual-e5-large                | 92.96     | 92.96               |
-| OpenAI/text-embedding-3-small                 | 92.92     | 92.92               |
-| cl-nagoya/ruri-base                           | 92.91     | 92.91               |
-| intfloat/multilingual-e5-base                 | 92.85     | 92.85               |
-| jinaai/jina-embeddings-v3                     | 92.71     | 92.71               |
-| pkshatech/RoSEtta-base-ja                     | 92.69     | 92.69               |
-| pkshatech/GLuCoSE-base-ja                     | 91.90     | 91.90               |
-| cl-nagoya/sup-simcse-ja-base                  | 91.83     | 91.83               |
-| sentence-transformers/LaBSE                   | 91.63     | 91.63               |
-| oshizo/sbert-jsnli-luke-japanese-base-lite    | 91.56     | 91.56               |
-| pkshatech/simcse-ja-bert-base-clcmlp          | 91.49     | 91.49               |
-| cl-nagoya/sup-simcse-ja-large                 | 91.48     | 91.48               |
-| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 91.30     | 91.30               |
-| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 91.16     | 91.16               |
-| cl-nagoya/unsup-simcse-ja-base                | 91.16     | 91.16               |
-| MU-Kindai/Japanese-MixCSE-BERT-base           | 91.01     | 91.01               |
-| cl-nagoya/unsup-simcse-ja-large               | 90.95     | 90.95               |
-| MU-Kindai/Japanese-DiffCSE-BERT-base          | 90.95     | 90.95               |
-| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 90.95     | 90.95               |
-| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 90.66     | 90.66               |
-| sentence-transformers/stsb-xlm-r-multilingual | 90.20     | 90.20               |
-| colorfulscoop/sbert-base-ja                   | 89.97     | 89.97               |
+| Model                                         | Avg.      | esci<br>(ndcg@10)   | jacwir_reranking<br>(ndcg@10)   | jqara<br>(ndcg@10)   | miracl_reranking<br>(ndcg@10)   | mldr_reranking<br>(ndcg@10)   |
+|:----------------------------------------------|:----------|:--------------------|:--------------------------------|:---------------------|:--------------------------------|:------------------------------|
+| cl-nagoya/ruri-v3-310m                        | **84.63** | 93.28               | 88.40                           | 65.12                | 83.45                           | **92.92**                     |
+| cl-nagoya/ruri-large-v2                       | 84.61     | 93.13               | 87.88                           | 64.83                | 85.12                           | 92.10                         |
+| sbintuitions/sarashina-embedding-v1-1b        | 84.36     | **93.59**           | 86.85                           | **65.92**            | 85.19                           | 90.24                         |
+| cl-nagoya/ruri-base-v2                        | 83.16     | 93.08               | 88.02                           | 60.81                | 84.16                           | 89.76                         |
+| cl-nagoya/ruri-v3-130m                        | 83.13     | 93.23               | 88.68                           | 59.50                | 83.65                           | 90.60                         |
+| intfloat/multilingual-e5-large                | 83.01     | 93.31               | **90.37**                       | 56.14                | **86.31**                       | 88.91                         |
+| cl-nagoya/ruri-v3-70m                         | 82.97     | 93.00               | 87.31                           | 59.37                | 83.44                           | 91.70                         |
+| cl-nagoya/ruri-large                          | 82.64     | 92.96               | 88.85                           | 60.79                | 81.25                           | 89.37                         |
+| pkshatech/GLuCoSE-base-ja-v2                  | 82.63     | 93.02               | 88.27                           | 60.70                | 82.44                           | 88.71                         |
+| cl-nagoya/ruri-small-v2                       | 82.24     | 93.25               | 88.97                           | 55.80                | 82.91                           | 90.28                         |
+| cl-nagoya/ruri-v3-30m                         | 81.57     | 93.06               | 87.73                           | 54.23                | 81.37                           | 91.43                         |
+| cl-nagoya/ruri-base                           | 81.25     | 92.90               | 88.35                           | 57.00                | 79.55                           | 88.47                         |
+| pkshatech/RoSEtta-base-ja                     | 81.25     | 92.68               | 86.83                           | 57.92                | 80.38                           | 88.45                         |
+| cl-nagoya/ruri-small                          | 80.23     | 93.06               | 88.68                           | 52.27                | 78.22                           | 88.90                         |
+| intfloat/multilingual-e5-small                | 80.09     | 92.98               | 89.99                           | 49.28                | 81.78                           | 86.41                         |
+| intfloat/multilingual-e5-base                 | 79.46     | 92.90               | 88.65                           | 47.61                | 81.97                           | 86.15                         |
+| pkshatech/GLuCoSE-base-ja                     | 72.37     | 91.82               | 74.54                           | 30.24                | 77.82                           | 87.42                         |
+| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 71.88     | 91.30               | 65.14                           | 44.96                | 71.21                           | 86.79                         |
+| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 70.59     | 90.93               | 61.45                           | 42.47                | 70.65                           | 87.42                         |
+| cl-nagoya/sup-simcse-ja-base                  | 70.36     | 91.84               | 64.27                           | 37.48                | 70.88                           | 87.34                         |
+| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 69.92     | 91.17               | 65.41                           | 38.39                | 70.19                           | 84.42                         |
+| oshizo/sbert-jsnli-luke-japanese-base-lite    | 69.67     | 91.58               | 67.41                           | 35.77                | 68.23                           | 85.38                         |
+| cl-nagoya/sup-simcse-ja-large                 | 68.76     | 91.50               | 56.15                           | 38.30                | 71.26                           | 86.60                         |
+| MU-Kindai/Japanese-MixCSE-BERT-base           | 68.58     | 90.92               | 60.51                           | 36.84                | 69.31                           | 85.31                         |
+| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 68.15     | 90.67               | 58.16                           | 36.66                | 69.09                           | 86.15                         |
+| pkshatech/simcse-ja-bert-base-clcmlp          | 68.10     | 91.60               | 57.46                           | 32.39                | 71.55                           | 87.50                         |
+| MU-Kindai/Japanese-DiffCSE-BERT-base          | 67.73     | 90.95               | 59.81                           | 37.20                | 67.90                           | 82.81                         |
+| cl-nagoya/unsup-simcse-ja-large               | 67.39     | 90.95               | 54.17                           | 38.78                | 70.02                           | 83.04                         |
+| sentence-transformers/LaBSE                   | 67.15     | 91.61               | 67.85                           | 24.88                | 69.56                           | 81.84                         |
+| cl-nagoya/unsup-simcse-ja-base                | 66.20     | 91.18               | 51.54                           | 32.19                | 69.96                           | 86.12                         |
+| colorfulscoop/sbert-base-ja                   | 59.38     | 89.97               | 37.15                           | 22.21                | 65.03                           | 82.55                         |
+| sentence-transformers/stsb-xlm-r-multilingual | 58.82     | 90.19               | 39.62                           | 21.52                | 65.90                           | 76.88                         |
 
 ## Clustering
-| Model                                         | Avg.      | livedoor_news<br>(v_measure_score)   | mewsc16<br>(v_measure_score)   |
-|:----------------------------------------------|:----------|:-------------------------------------|:-------------------------------|
-| cl-nagoya/ruri-base                           | **54.16** | 54.27                                | **54.04**                      |
-| sbintuitions/sarashina-embedding-v1-1b        | 53.86     | 56.42                                | 51.29                          |
-| OpenAI/text-embedding-3-large                 | 53.32     | 57.09                                | 49.55                          |
-| pkshatech/RoSEtta-base-ja                     | 53.23     | **58.62**                            | 47.85                          |
-| cl-nagoya/ruri-large                          | 51.82     | 51.39                                | 52.25                          |
-| cl-nagoya/sup-simcse-ja-base                  | 51.79     | 52.67                                | 50.91                          |
-| jinaai/jina-embeddings-v3                     | 51.46     | 54.72                                | 48.19                          |
-| intfloat/multilingual-e5-large                | 51.24     | 57.13                                | 45.34                          |
-| cl-nagoya/ruri-small                          | 51.19     | 50.96                                | 51.41                          |
-| OpenAI/text-embedding-3-small                 | 51.06     | 54.57                                | 47.55                          |
-| cl-nagoya/sup-simcse-ja-large                 | 50.56     | 50.75                                | 50.38                          |
-| oshizo/sbert-jsnli-luke-japanese-base-lite    | 50.33     | 46.77                                | 53.89                          |
-| pkshatech/GLuCoSE-base-ja                     | 49.78     | 49.89                                | 49.68                          |
-| pkshatech/GLuCoSE-base-ja-v2                  | 48.65     | 51.52                                | 45.78                          |
-| cl-nagoya/unsup-simcse-ja-large               | 48.41     | 50.90                                | 45.92                          |
-| OpenAI/text-embedding-ada-002                 | 48.30     | 49.67                                | 46.92                          |
-| intfloat/multilingual-e5-base                 | 48.26     | 55.03                                | 41.49                          |
-| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 48.25     | 53.20                                | 43.31                          |
-| pkshatech/simcse-ja-bert-base-clcmlp          | 47.53     | 44.77                                | 50.30                          |
-| intfloat/multilingual-e5-small                | 46.91     | 54.70                                | 39.12                          |
-| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 46.68     | 53.02                                | 40.35                          |
-| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 45.81     | 48.45                                | 43.17                          |
-| MU-Kindai/Japanese-MixCSE-BERT-base           | 44.95     | 52.62                                | 37.28                          |
-| sentence-transformers/LaBSE                   | 44.88     | 48.29                                | 41.47                          |
-| colorfulscoop/sbert-base-ja                   | 44.81     | 42.99                                | 46.64                          |
-| cl-nagoya/unsup-simcse-ja-base                | 44.77     | 52.23                                | 37.31                          |
-| MU-Kindai/Japanese-DiffCSE-BERT-base          | 44.22     | 49.67                                | 38.77                          |
-| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 43.11     | 41.04                                | 45.18                          |
-| sentence-transformers/stsb-xlm-r-multilingual | 27.46     | 24.49                                | 30.43                          |
-
-## PairClassification
-| Model                                         | Avg.      | paws_x_ja<br>(binary_f1)   |
-|:----------------------------------------------|:----------|:---------------------------|
-| pkshatech/GLuCoSE-base-ja                     | **66.39** | **66.39**                  |
-| cl-nagoya/sup-simcse-ja-base                  | 62.57     | 62.57                      |
-| cl-nagoya/sup-simcse-ja-large                 | 62.51     | 62.51                      |
-| cl-nagoya/unsup-simcse-ja-large               | 62.49     | 62.49                      |
-| cl-nagoya/unsup-simcse-ja-base                | 62.44     | 62.44                      |
-| pkshatech/simcse-ja-bert-base-clcmlp          | 62.40     | 62.40                      |
-| OpenAI/text-embedding-ada-002                 | 62.40     | 62.40                      |
-| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 62.38     | 62.38                      |
-| cl-nagoya/ruri-base                           | 62.38     | 62.38                      |
-| oshizo/sbert-jsnli-luke-japanese-base-lite    | 62.38     | 62.38                      |
-| MU-Kindai/Japanese-DiffCSE-BERT-base          | 62.38     | 62.38                      |
-| jinaai/jina-embeddings-v3                     | 62.37     | 62.37                      |
-| pkshatech/GLuCoSE-base-ja-v2                  | 62.37     | 62.37                      |
-| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 62.37     | 62.37                      |
-| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 62.35     | 62.35                      |
-| OpenAI/text-embedding-3-large                 | 62.35     | 62.35                      |
-| MU-Kindai/Japanese-MixCSE-BERT-base           | 62.33     | 62.33                      |
-| sentence-transformers/LaBSE                   | 62.33     | 62.33                      |
-| colorfulscoop/sbert-base-ja                   | 62.31     | 62.31                      |
-| cl-nagoya/ruri-large                          | 62.29     | 62.29                      |
-| OpenAI/text-embedding-3-small                 | 62.27     | 62.27                      |
-| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 62.27     | 62.27                      |
-| intfloat/multilingual-e5-base                 | 62.26     | 62.26                      |
-| sentence-transformers/stsb-xlm-r-multilingual | 62.20     | 62.20                      |
-| intfloat/multilingual-e5-small                | 62.19     | 62.19                      |
-| intfloat/multilingual-e5-large                | 62.15     | 62.15                      |
-| cl-nagoya/ruri-small                          | 62.11     | 62.11                      |
-| sbintuitions/sarashina-embedding-v1-1b        | 62.00     | 62.00                      |
-| pkshatech/RoSEtta-base-ja                     | 61.74     | 61.74                      |
+| Model                                         | Avg.      | livedoor_news<br>(v_measure_score)   | mewsc16<br>(v_measure_score)   | sib200_jpn_clust<br>(v_measure_score)   |
+|:----------------------------------------------|:----------|:-------------------------------------|:-------------------------------|:----------------------------------------|
+| cl-nagoya/ruri-small                          | **53.35** | 57.47                                | 47.35                          | **55.24**                               |
+| cl-nagoya/ruri-large                          | 51.93     | **58.77**                            | 47.15                          | 49.87                                   |
+| cl-nagoya/sup-simcse-ja-base                  | 51.92     | 53.15                                | 53.39                          | 49.21                                   |
+| cl-nagoya/ruri-v3-310m                        | 50.85     | 55.22                                | 49.63                          | 47.71                                   |
+| intfloat/multilingual-e5-large                | 50.58     | 51.58                                | 46.81                          | 53.35                                   |
+| sbintuitions/sarashina-embedding-v1-1b        | 50.23     | 55.81                                | 50.69                          | 44.19                                   |
+| intfloat/multilingual-e5-base                 | 50.12     | 53.79                                | 49.44                          | 47.13                                   |
+| cl-nagoya/ruri-v3-30m                         | 49.67     | 51.77                                | 47.64                          | 49.62                                   |
+| cl-nagoya/sup-simcse-ja-large                 | 49.37     | 53.38                                | 48.99                          | 45.74                                   |
+| pkshatech/simcse-ja-bert-base-clcmlp          | 49.34     | 43.92                                | 51.89                          | 52.21                                   |
+| cl-nagoya/ruri-small-v2                       | 49.32     | 54.51                                | 51.42                          | 42.03                                   |
+| cl-nagoya/ruri-v3-130m                        | 49.30     | 53.32                                | 50.22                          | 44.36                                   |
+| cl-nagoya/ruri-base-v2                        | 49.29     | 53.04                                | **54.98**                      | 39.86                                   |
+| cl-nagoya/ruri-large-v2                       | 48.75     | 47.16                                | 48.82                          | 50.27                                   |
+| intfloat/multilingual-e5-small                | 48.71     | 50.21                                | 52.34                          | 43.59                                   |
+| pkshatech/GLuCoSE-base-ja-v2                  | 48.19     | 54.46                                | 46.12                          | 43.98                                   |
+| cl-nagoya/ruri-base                           | 48.16     | 54.58                                | 48.29                          | 41.61                                   |
+| pkshatech/GLuCoSE-base-ja                     | 47.05     | 50.21                                | 49.52                          | 41.43                                   |
+| oshizo/sbert-jsnli-luke-japanese-base-lite    | 46.96     | 44.48                                | 53.36                          | 43.03                                   |
+| pkshatech/RoSEtta-base-ja                     | 45.96     | 52.12                                | 45.16                          | 40.61                                   |
+| cl-nagoya/ruri-v3-70m                         | 45.49     | 50.23                                | 50.66                          | 35.57                                   |
+| MU-Kindai/Japanese-SimCSE-BERT-large-sup      | 44.54     | 51.30                                | 46.27                          | 36.04                                   |
+| cl-nagoya/unsup-simcse-ja-large               | 43.52     | 51.48                                | 44.44                          | 34.65                                   |
+| MU-Kindai/Japanese-MixCSE-BERT-base           | 43.18     | 47.73                                | 43.20                          | 38.60                                   |
+| MU-Kindai/Japanese-SimCSE-BERT-base-sup       | 42.86     | 45.84                                | 44.08                          | 38.67                                   |
+| cl-nagoya/unsup-simcse-ja-base                | 41.39     | 50.65                                | 37.60                          | 35.93                                   |
+| MU-Kindai/Japanese-SimCSE-BERT-large-unsup    | 41.36     | 51.59                                | 42.68                          | 29.81                                   |
+| colorfulscoop/sbert-base-ja                   | 39.07     | 40.60                                | 46.24                          | 30.36                                   |
+| sentence-transformers/LaBSE                   | 38.68     | 46.36                                | 41.07                          | 28.59                                   |
+| MU-Kindai/Japanese-SimCSE-BERT-base-unsup     | 37.60     | 46.27                                | 40.11                          | 26.42                                   |
+| MU-Kindai/Japanese-DiffCSE-BERT-base          | 37.34     | 46.01                                | 39.22                          | 26.78                                   |
+| sentence-transformers/stsb-xlm-r-multilingual | 27.71     | 26.37                                | 32.42                          | 24.34                                   |
 
