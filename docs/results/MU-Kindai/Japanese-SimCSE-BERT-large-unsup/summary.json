@@ -41,10 +41,10 @@
     },
     "Retrieval": {
         "jacwir_retrieval": {
-            "ndcg@10": 0.531717005917321
+            "ndcg@10": 0.5316167737103407
         },
         "jagovfaqs_22k": {
-            "ndcg@10": 0.5124444261904517
+            "ndcg@10": 0.5120263378587457
         },
         "jaqket": {
             "ndcg@10": 0.45810454318653493
@@ -84,13 +84,13 @@
     },
     "Clustering": {
         "livedoor_news": {
-            "v_measure_score": 0.5159318544938132
+            "v_measure_score": 0.5491083580906443
         },
         "mewsc16": {
             "v_measure_score": 0.4267958807672512
         },
         "sib200_japanese_clustering": {
-            "v_measure_score": 0.29814017098068235
+            "v_measure_score": 0.3178045302473092
         }
     }
 }

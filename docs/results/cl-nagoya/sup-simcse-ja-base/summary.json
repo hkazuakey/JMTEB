@@ -41,10 +41,10 @@
     },
     "Retrieval": {
         "jacwir_retrieval": {
-            "ndcg@10": 0.5331849641283571
+            "ndcg@10": 0.5331630522529377
         },
         "jagovfaqs_22k": {
-            "ndcg@10": 0.5211233562812493
+            "ndcg@10": 0.5202480516932524
         },
         "jaqket": {
             "ndcg@10": 0.5013089667314551
@@ -84,7 +84,7 @@
     },
     "Clustering": {
         "livedoor_news": {
-            "v_measure_score": 0.5314915727484987
+            "v_measure_score": 0.5248555489302708
         },
         "mewsc16": {
             "v_measure_score": 0.5339141639252604

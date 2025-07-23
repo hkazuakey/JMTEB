@@ -41,10 +41,10 @@
     },
     "Retrieval": {
         "jacwir_retrieval": {
-            "ndcg@10": 0.4370851114185404
+            "ndcg@10": 0.4370774500135088
         },
         "jagovfaqs_22k": {
-            "ndcg@10": 0.4747969927681776
+            "ndcg@10": 0.47421467281855384
         },
         "jaqket": {
             "ndcg@10": 0.4004385277719307
@@ -87,7 +87,7 @@
             "v_measure_score": 0.5337915256082275
         },
         "mewsc16": {
-            "v_measure_score": 0.48989204637173395
+            "v_measure_score": 0.5111565926265328
         },
         "sib200_japanese_clustering": {
             "v_measure_score": 0.45736658859438273
