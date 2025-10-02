@@ -201,6 +201,7 @@ class DataParallelSentenceBertEmbedder(TextEmbedder):
         )
         self.dp_model = DPSentenceTransformer(sbert_model=model)
         self.model = self.dp_model.sbert
+        self._orig_max_length = self.model.max_seq_length
         if max_seq_length:
             self.model.max_seq_length = max_seq_length
         self.initital_batch_size = batch_size
@@ -258,3 +259,7 @@ class DataParallelSentenceBertEmbedder(TextEmbedder):
 
     def get_output_dim(self) -> int:
         return self.model.get_sentence_embedding_dimension()
+
+    def reset_max_seq_length(self):
+        logger.info(f"Reset `max_seq_length` to {self._orig_max_length}")
+        self.model.max_seq_length = self._orig_max_length

@@ -144,3 +144,17 @@ class TextEmbedder(ABC):
     def set_output_numpy(self):
         self.convert_to_numpy = True
         self.convert_to_tensor = False
+
+    def set_max_seq_length(self, max_seq_length: int | None = None) -> None:
+        if hasattr(self, "max_seq_length"):
+            self.max_seq_length = max_seq_length
+        else:
+            logger.warning("Embedder doesn't have a `max_seq_length` attribute!")
+
+    def reset_max_seq_length(self):
+        orig_max_seq_length = getattr(self, "_orig_max_length", None)
+        if not orig_max_seq_length:
+            logger.warning("Failed to reset `max_seq_length`!")
+        else:
+            logger.info(f"Set `max_seq_length` to model default: {orig_max_seq_length}")
+            self.max_seq_length = orig_max_seq_length

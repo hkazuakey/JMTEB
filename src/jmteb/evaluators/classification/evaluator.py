@@ -66,13 +66,22 @@ class ClassificationEvaluator(EmbeddingEvaluator):
         if cache_dir is not None:
             Path(cache_dir).mkdir(parents=True, exist_ok=True)
 
+        # Auto-optimize for PlamoEmbedder if no explicit kwargs provided
+        encode_kwargs = self.encode_kwargs.copy()
+
+        # Check if this is a PlamoEmbedder and set optimal encoding mode
+        if model.__class__.__name__ in ("PlamoEmbedder", "GemmaEmbedder"):
+            if "query_mode" not in encode_kwargs:
+                encode_kwargs["query_mode"] = False  # Use document mode for classification texts
+            logger.info(f"Auto-optimized {model.__class__.__name__}: query_mode=False for classification texts")
+
         logger.info("Encoding training and validation sentences...")
         X_train = model.batch_encode_with_cache(
             [item.text for item in self.train_dataset],
             prefix=self.prefix,
             cache_path=Path(cache_dir) / "train_embeddings.bin" if cache_dir is not None else None,
             overwrite_cache=overwrite_cache,
-            **self.encode_kwargs,
+            **encode_kwargs,
         )
         y_train = [item.label for item in self.train_dataset]
 
@@ -81,7 +90,7 @@ class ClassificationEvaluator(EmbeddingEvaluator):
             prefix=self.prefix,
             cache_path=Path(cache_dir) / "val_embeddings.bin" if cache_dir is not None else None,
             overwrite_cache=overwrite_cache,
-            **self.encode_kwargs,
+            **encode_kwargs,
         )
         y_val = [item.label for item in self.val_dataset]
 
@@ -95,7 +104,7 @@ class ClassificationEvaluator(EmbeddingEvaluator):
                 prefix=self.prefix,
                 cache_path=Path(cache_dir) / "test_embeddings.bin" if cache_dir is not None else None,
                 overwrite_cache=overwrite_cache,
-                **self.encode_kwargs,
+                **encode_kwargs,
             )
             y_test = [item.label for item in self.test_dataset]
 
