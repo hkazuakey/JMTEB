@@ -8,7 +8,6 @@ from typing import Callable
 
 import numpy as np
 import torch
-from loguru import logger
 from scipy.stats import pearsonr, spearmanr
 from torch import Tensor
 
