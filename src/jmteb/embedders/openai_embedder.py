@@ -6,8 +6,8 @@ from os import PathLike
 from pathlib import Path
 
 import numpy as np
-import tqdm
 import tiktoken
+import tqdm
 from loguru import logger
 from openai import OpenAI
 
