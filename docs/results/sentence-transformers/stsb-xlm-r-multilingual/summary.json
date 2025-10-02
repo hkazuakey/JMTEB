@@ -4,10 +4,10 @@
             "macro_f1": 0.7514299930187799
         },
         "amazon_review_classification": {
-            "macro_f1": 0.5113667375588362
+            "macro_f1": 0.516712003417941
         },
         "japanese_sentiment_classification": {
-            "macro_f1": 0.8653980041773033
+            "macro_f1": 0.8714537157100772
         },
         "massive_intent_classification": {
             "macro_f1": 0.7433839585058197
@@ -24,16 +24,16 @@
     },
     "Reranking": {
         "esci": {
-            "ndcg@10": 0.901890341341842
+            "ndcg@10": 0.8971639400421929
         },
         "jacwir_reranking": {
-            "ndcg@10": 0.39624043125448744
+            "ndcg@10": 0.3920595575511347
         },
         "jqara": {
-            "ndcg@10": 0.2151865684492273
+            "ndcg@10": 0.18511169246774806
         },
         "miracl_reranking": {
-            "ndcg@10": 0.659024218324574
+            "ndcg@10": 0.6535500060613615
         },
         "mldr_reranking": {
             "ndcg@10": 0.768787823495723
@@ -41,19 +41,19 @@
     },
     "Retrieval": {
         "jacwir_retrieval": {
-            "ndcg@10": 0.21305201715296948
+            "ndcg@10": 0.21075313614845367
         },
         "jagovfaqs_22k": {
-            "ndcg@10": 0.2556849980765764
+            "ndcg@10": 0.2248606553485316
         },
         "jaqket": {
-            "ndcg@10": 0.216905594393324
+            "ndcg@10": 0.06494577519372931
         },
         "mintaka_retrieval": {
             "ndcg@10": 0.22312923127278733
         },
         "miracl_retrieval": {
-            "ndcg@10": 0.025873352550354844
+            "ndcg@10": 0.022833015048992402
         },
         "mldr_retrieval": {
             "ndcg@10": 0.06529330431356167
@@ -84,10 +84,10 @@
     },
     "Clustering": {
         "livedoor_news": {
-            "v_measure_score": 0.26373496762588294
+            "v_measure_score": 0.26615937330682315
         },
         "mewsc16": {
-            "v_measure_score": 0.32418419167915596
+            "v_measure_score": 0.32048277963560623
         },
         "sib200_japanese_clustering": {
             "v_measure_score": 0.2434250739162938

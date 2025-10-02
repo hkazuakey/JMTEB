@@ -4,10 +4,10 @@
             "macro_f1": 0.7473900578785092
         },
         "amazon_review_classification": {
-            "macro_f1": 0.5163267880432743
+            "macro_f1": 0.5163381922398036
         },
         "japanese_sentiment_classification": {
-            "macro_f1": 0.8943804239578887
+            "macro_f1": 0.8952055768957177
         },
         "massive_intent_classification": {
             "macro_f1": 0.7708783013419095
@@ -24,16 +24,16 @@
     },
     "Reranking": {
         "esci": {
-            "ndcg@10": 0.9160790861014678
+            "ndcg@10": 0.9147393987384248
         },
         "jacwir_reranking": {
             "ndcg@10": 0.6785244283016075
         },
         "jqara": {
-            "ndcg@10": 0.2488300870810785
+            "ndcg@10": 0.24624584903493016
         },
         "miracl_reranking": {
-            "ndcg@10": 0.6956277678029864
+            "ndcg@10": 0.692780512325045
         },
         "mldr_reranking": {
             "ndcg@10": 0.818396899799895
@@ -44,16 +44,16 @@
             "ndcg@10": 0.49122610922285737
         },
         "jagovfaqs_22k": {
-            "ndcg@10": 0.4278654773482106
+            "ndcg@10": 0.4243154817699682
         },
         "jaqket": {
-            "ndcg@10": 0.34162439290480445
+            "ndcg@10": 0.24919695742546066
         },
         "mintaka_retrieval": {
             "ndcg@10": 0.20021150938693902
         },
         "miracl_retrieval": {
-            "ndcg@10": 0.09640164259724278
+            "ndcg@10": 0.09357313571231995
         },
         "mldr_retrieval": {
             "ndcg@10": 0.07525879379433965
@@ -84,10 +84,10 @@
     },
     "Clustering": {
         "livedoor_news": {
-            "v_measure_score": 0.48580223329334865
+            "v_measure_score": 0.4908336523752348
         },
         "mewsc16": {
-            "v_measure_score": 0.41072280934417754
+            "v_measure_score": 0.41781835844551085
         },
         "sib200_japanese_clustering": {
             "v_measure_score": 0.2859403214333406

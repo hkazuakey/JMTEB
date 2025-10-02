@@ -84,7 +84,7 @@
     },
     "Clustering": {
         "livedoor_news": {
-            "v_measure_score": 0.5248555489302708
+            "v_measure_score": 0.5511252826598367
         },
         "mewsc16": {
             "v_measure_score": 0.5339141639252604

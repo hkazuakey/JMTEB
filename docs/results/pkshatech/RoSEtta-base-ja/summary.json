@@ -4,7 +4,7 @@
             "macro_f1": 0.7021400751808275
         },
         "amazon_review_classification": {
-            "macro_f1": 0.5222844241125081
+            "macro_f1": 0.5261693704750353
         },
         "japanese_sentiment_classification": {
             "macro_f1": 0.8728387064627037
@@ -24,7 +24,7 @@
     },
     "Reranking": {
         "esci": {
-            "ndcg@10": 0.9267798900027316
+            "ndcg@10": 0.9267709447988313
         },
         "jacwir_reranking": {
             "ndcg@10": 0.8682926176464301
@@ -33,7 +33,7 @@
             "ndcg@10": 0.5792158527364997
         },
         "miracl_reranking": {
-            "ndcg@10": 0.8038167802919151
+            "ndcg@10": 0.8038275156892214
         },
         "mldr_reranking": {
             "ndcg@10": 0.8844542290758788
@@ -44,16 +44,16 @@
             "ndcg@10": 0.8201713015308671
         },
         "jagovfaqs_22k": {
-            "ndcg@10": 0.6624123008303046
+            "ndcg@10": 0.6627940635852495
         },
         "jaqket": {
-            "ndcg@10": 0.6534322606981797
+            "ndcg@10": 0.642772517951208
         },
         "mintaka_retrieval": {
             "ndcg@10": 0.3404237377925581
         },
         "miracl_retrieval": {
-            "ndcg@10": 0.6019862449112752
+            "ndcg@10": 0.6016261958696313
         },
         "mldr_retrieval": {
             "ndcg@10": 0.3236631225997826
@@ -84,7 +84,7 @@
     },
     "Clustering": {
         "livedoor_news": {
-            "v_measure_score": 0.5617913119479273
+            "v_measure_score": 0.4888541691163841
         },
         "mewsc16": {
             "v_measure_score": 0.4515710456360326
