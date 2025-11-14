@@ -1,21 +1,21 @@
 {
-  paws_x_ja: {
-    class_path: 'PairClassificationEvaluator',
+  sib200_japanese_clustering: {
+    class_path: 'ClusteringEvaluator',
     init_args: {
       val_dataset: {
-        class_path: 'HfPairClassificationDataset',
+        class_path: 'HfClusteringDataset',
         init_args: {
           path: 'sbintuitions/JMTEB',
           split: 'validation',
-          name: 'paws_x_ja',
+          name: 'sib200_japanese_clustering',
         },
       },
       test_dataset: {
-        class_path: 'HfPairClassificationDataset',
+        class_path: 'HfClusteringDataset',
         init_args: {
           path: 'sbintuitions/JMTEB',
           split: 'test',
-          name: 'paws_x_ja',
+          name: 'sib200_japanese_clustering',
         },
       },
     },

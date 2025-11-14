@@ -56,8 +56,21 @@ class JsonScoreRecorder(AbstractScoreRecorder):
     def record_summary(self):
         if not self.save_dir:
             return
-        summary: dict[str, dict[str, dict[str, float]]] = defaultdict(dict)
+
+        summary_path = Path(self.save_dir) / "summary.json"
+
+        # Load existing summary if it exists
+        if summary_path.exists():
+            with open(summary_path, "r") as fin:
+                summary = json.load(fin)
+        else:
+            summary = {}
+
+        # Merge new results into existing summary
         for task_name, task_scores in self.scores.items():
+            if task_name not in summary:
+                summary[task_name] = {}
             for dataset_name, results in self.scores[task_name].items():
                 summary[task_name][dataset_name] = {results.metric_name: results.metric_value}
-        self.save_to_json(summary, Path(self.save_dir) / "summary.json")
+
+        self.save_to_json(summary, summary_path)
