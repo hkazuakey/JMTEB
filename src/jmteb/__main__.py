@@ -119,6 +119,7 @@ if __name__ == "__main__":
         )
 
     if args.log_predictions:
+        logger.info("Prediction logging activated.")
         for k, v in args.evaluators.items():
             if hasattr(v, "log_predictions"):
                 args.evaluators[k].log_predictions = True

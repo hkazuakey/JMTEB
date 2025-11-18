@@ -14,6 +14,7 @@ from sklearn.cluster import (
     MiniBatchKMeans,
 )
 from sklearn.metrics import homogeneity_completeness_v_measure
+from sklearn.preprocessing import normalize
 
 from jmteb.embedders.base import TextEmbedder
 from jmteb.evaluators.base import EmbeddingEvaluator, EvaluationResults
@@ -57,13 +58,22 @@ class ClusteringEvaluator(EmbeddingEvaluator):
         if cache_dir is not None:
             Path(cache_dir).mkdir(parents=True, exist_ok=True)
 
+        # Auto-optimize for PlamoEmbedder if no explicit kwargs provided
+        encode_kwargs = self.encode_kwargs.copy()
+
+        # Check if this is a PlamoEmbedder and set optimal encoding mode
+        if model.__class__.__name__ in ("PlamoEmbedder", "GemmaEmbedder"):
+            if "query_mode" not in encode_kwargs:
+                encode_kwargs["query_mode"] = False  # Use document mode for clustering texts
+            logger.info(f"Auto-optimized {model.__class__.__name__}: query_mode=False for clustering texts")
+
         logger.info("Converting validation data to embeddings...")
         val_embeddings = model.batch_encode_with_cache(
             [item.text for item in self.val_dataset],
             prefix=self.prefix,
             cache_path=Path(cache_dir) / "val_embeddings.bin" if cache_dir is not None else None,
             overwrite_cache=overwrite_cache,
-            **self.encode_kwargs,
+            **encode_kwargs,
         )
         val_labels = [item.label for item in self.val_dataset]
 
@@ -77,7 +87,7 @@ class ClusteringEvaluator(EmbeddingEvaluator):
                 prefix=self.prefix,
                 cache_path=Path(cache_dir) / "test_embeddings.bin" if cache_dir is not None else None,
                 overwrite_cache=overwrite_cache,
-                **self.encode_kwargs,
+                **encode_kwargs,
             )
             test_labels = [item.label for item in self.test_dataset]
 
@@ -127,7 +137,19 @@ class ClusteringEvaluator(EmbeddingEvaluator):
     def _evaluate_clustering_model(
         embeddings: np.ndarray, y_true: list[int], clustering_model: ClusterMixin
     ) -> tuple[dict[str, float], list[int]]:
-        y_pred = clustering_model.fit_predict(embeddings)
+        try:
+            # First try without normalization to preserve original behavior when possible
+            y_pred = clustering_model.fit_predict(embeddings)
+        except ValueError as e:
+            # If overflow error occurs, apply normalization and retry
+            if "infinity" in str(e).lower() or "too large" in str(e).lower():
+                logger.warning(f"Overflow detected in clustering, applying L2 normalization: {e}")
+                embeddings_normalized = normalize(embeddings, norm="l2")
+                y_pred = clustering_model.fit_predict(embeddings_normalized)
+            else:
+                # Re-raise if it's a different ValueError
+                raise e
+
         h_score, c_score, v_score = homogeneity_completeness_v_measure(
             labels_pred=y_pred, labels_true=np.array(y_true)
         )

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import numpy as np
+from loguru import logger
 from sentence_transformers import SentenceTransformer
 
 from jmteb.embedders.base import TextEmbedder
@@ -29,6 +30,7 @@ class SentenceBertEmbedder(TextEmbedder):
             model_kwargs=model_kwargs,  # https://github.com/UKPLab/sentence-transformers/blob/84f69fee6dcde023f46a8807e89bc99a7700ba82/sentence_transformers/SentenceTransformer.py#L81-L105  # noqa: E501
             tokenizer_kwargs=tokenizer_kwargs,
         )
+        self._orig_max_length = self.model.max_seq_length
         if max_seq_length:
             self.model.max_seq_length = max_seq_length
 
@@ -70,3 +72,10 @@ class SentenceBertEmbedder(TextEmbedder):
 
     def get_output_dim(self) -> int:
         return self.model.get_sentence_embedding_dimension()
+
+    def reset_max_seq_length(self):
+        try:
+            logger.info(f"Reset `max_seq_length` to {self._orig_max_length}")
+            self.model.max_seq_length = self._orig_max_length
+        except AttributeError:
+            pass

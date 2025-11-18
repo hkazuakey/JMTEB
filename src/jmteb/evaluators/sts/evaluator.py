@@ -52,8 +52,17 @@ class STSEvaluator(EmbeddingEvaluator):
         if cache_dir is not None:
             Path(cache_dir).mkdir(parents=True, exist_ok=True)
 
+        # Auto-optimize for PlamoEmbedder if no explicit kwargs provided
+        encode_kwargs = self.encode_kwargs.copy()
+
+        # # Check if this is a PlamoEmbedder and set optimal encoding mode
+        # if model.__class__.__name__ == "PlamoEmbedder":
+        #     if "query_mode" not in encode_kwargs:
+        #         encode_kwargs["query_mode"] = False  # Use document mode for STS texts
+        #     logger.info("Auto-optimized PlamoEmbedder: query_mode=False for STS texts")
+
         val_embeddings1, val_embeddings2, val_golden_scores = self._convert_to_embeddings(
-            model, self.val_dataset, "dev", overwrite_cache, cache_dir
+            model, self.val_dataset, "dev", overwrite_cache, cache_dir, encode_kwargs
         )
         if self.val_dataset == self.test_dataset:
             test_embeddings1, test_embeddings2, test_golden_scores = (
@@ -62,7 +71,7 @@ class STSEvaluator(EmbeddingEvaluator):
                 val_golden_scores,
             )
         test_embeddings1, test_embeddings2, test_golden_scores = self._convert_to_embeddings(
-            model, self.test_dataset, "test", overwrite_cache, cache_dir
+            model, self.test_dataset, "test", overwrite_cache, cache_dir, encode_kwargs
         )
 
         similarity_functions = {
@@ -146,20 +155,24 @@ class STSEvaluator(EmbeddingEvaluator):
         split: str = "test",
         overwrite_cache: bool = False,
         cache_dir: str | None = None,
+        encode_kwargs: dict | None = None,
     ) -> tuple[Tensor, Tensor, list[float]]:
+        if encode_kwargs is None:
+            encode_kwargs = self.encode_kwargs
+
         embeddings1 = model.batch_encode_with_cache(
             [item.sentence1 for item in dataset],
             prefix=self.sentence1_prefix,
             cache_path=Path(cache_dir) / f"{split}_embeddings1.bin" if cache_dir is not None else None,
             overwrite_cache=overwrite_cache,
-            **self.encode_kwargs,
+            **encode_kwargs,
         )
         embeddings2 = model.batch_encode_with_cache(
             [item.sentence2 for item in dataset],
             prefix=self.sentence2_prefix,
             cache_path=Path(cache_dir) / f"{split}_embeddings2.bin" if cache_dir is not None else None,
             overwrite_cache=overwrite_cache,
-            **self.encode_kwargs,
+            **encode_kwargs,
         )
         device = "cuda" if torch.cuda.is_available() else "cpu"
         embeddings1 = convert_to_tensor(embeddings1, device)

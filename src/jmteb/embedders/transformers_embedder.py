@@ -48,6 +48,7 @@ class TransformersEmbedder(TextEmbedder):
         logger.info(f"{self.model.device=}, {torch.cuda.device_count()=}")
         self.tokenizer: PreTrainedTokenizer = AutoTokenizer.from_pretrained(model_name_or_path, **tokenizer_kwargs)
 
+        self._orig_max_length = getattr(self.model, "max_seq_length", None)
         self.max_seq_length = getattr(self.model, "max_seq_length", None)
         if max_seq_length:
             self.max_seq_length = max_seq_length
@@ -135,7 +136,9 @@ class TransformersEmbedder(TextEmbedder):
         if self.add_eos:
             text = self._add_eos_func(text)
 
-        encoded_input = self.tokenizer(text, padding=True, truncation=True, return_tensors="pt").to(self.model.device)
+        encoded_input = self.tokenizer(
+            text, padding=True, truncation=True, return_tensors="pt", max_length=self.max_seq_length
+        ).to(self.model.device)
         model_output = self.model(**encoded_input)
         last_hidden_states = model_output["last_hidden_state"]
         features = {

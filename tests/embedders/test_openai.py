@@ -75,9 +75,7 @@ class TestOpenAIEmbedder:
 
     def test_truncate(self):
         assert len(self.model.encode_and_truncate_text(TEXT)) == 6
-        assert (
-            len(self.model.encode_and_truncate_text(TEXT * self.model.max_token_length)) == self.model.max_token_length
-        )
+        assert len(self.model.encode_and_truncate_text(TEXT * self.model.max_seq_length)) == self.model.max_seq_length
 
     def test_nonexistent_model(self):
         with pytest.raises(AssertionError):
@@ -89,9 +87,9 @@ class TestOpenAIEmbedder:
         assert OpenAIEmbedder(model="text-embedding-ada-002").dim == 1536
 
     def test_model_max_token_length(self):
-        assert OpenAIEmbedder(model="text-embedding-3-large").max_token_length == 8191
-        assert OpenAIEmbedder(model="text-embedding-3-small").max_token_length == 8191
-        assert OpenAIEmbedder(model="text-embedding-ada-002").max_token_length == 8191
+        assert OpenAIEmbedder(model="text-embedding-3-large").max_seq_length == 8191
+        assert OpenAIEmbedder(model="text-embedding-3-small").max_seq_length == 8191
+        assert OpenAIEmbedder(model="text-embedding-ada-002").max_seq_length == 8191
 
     def test_model_encoder(self):
         assert OpenAIEmbedder(model="text-embedding-3-large").encoding.name == "cl100k_base"

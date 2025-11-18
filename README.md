@@ -41,7 +41,7 @@ If you want to evaluate the model on a specific task, you can specify the task v
 
 ```bash
 poetry run python -m jmteb \
-  --evaluators "src/configs/tasks/jsts.jsonnet" \
+  --evaluators "src/jmteb/configs/tasks/jsts.jsonnet" \
   --embedder SentenceBertEmbedder \
   --embedder.model_name_or_path "<model_name_or_path>" \
   --save_dir "output/<model_name_or_path>"
@@ -61,7 +61,7 @@ There are two ways to enable multi-GPU evaluation.
 
 ```bash
 poetry run python -m jmteb \
-  --evaluators "src/configs/tasks/jsts.jsonnet" \
+  --evaluators "src/jmteb/configs/tasks/jsts.jsonnet" \
   --embedder DataParallelSentenceBertEmbedder \
   --embedder.model_name_or_path "<model_name_or_path>" \
   --save_dir "output/<model_name_or_path>"
